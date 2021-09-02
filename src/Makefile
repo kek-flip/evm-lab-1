@@ -22,7 +22,7 @@ SRC = test
 	$(OBJCOPY) -O binary --reverse-bytes=4 $< $@ 
 
 %.hex: %.bin 
-	$(OBJCOPY) -O verilog -I binary $< $@
+	$(OBJCOPY) -O verilog -I binary --verilog-data-width=4 $< $@
 
 default: $(SRC).hex
 
