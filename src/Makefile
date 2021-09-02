@@ -15,7 +15,7 @@ SRC = test
 	$(OBJCOPY) -O binary --reverse-bytes=4 $< $@ 
 
 %.hex: %.bin 
-	 xxd -g 4 -c 4 -p $< $@
+	$(OBJCOPY) -O verilog -I binary $< $@
 
 default: $(SRC).hex
 
