@@ -1,7 +1,14 @@
+ifeq ($(OS),Windows_NT)
+AS = riscv64-unknown-elf-as --march=rv32i
+LD = riscv64-unknown-elf-ld -b elf32-littleriscv
+OBJCOPY = riscv64-unknown-elf-objcopy
+OBJDUMP = riscv64-unknown-elf-objdump
+else
 AS = riscv64-linux-gnu-as --march=rv32i
 LD = riscv64-linux-gnu-ld -b elf32-littleriscv
 OBJCOPY = riscv64-linux-gnu-objcopy
 OBJDUMP = riscv64-linux-gnu-objdump
+endif
 SRC = test
 
 %.o: %.s
