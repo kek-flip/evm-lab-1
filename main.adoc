@@ -872,7 +872,7 @@ ID :: Такт, в котором происходит операция дисп
 
 . Открыть проект `riscv-lab/taiga/taiga.qpf` в среде Intel Quartus. При запуске
 Intel Quartus, если потребуется, выбрать опцию `Run the Quartus Prime software`.
-. Выполнить синтез проекта выбрав пункт меню Processing -> Start Compilation.
+. Выполнить синтез проекта выбрав пункт меню Processing -> Start -> Start Analysis & Synthesis.
 . Запустить симуляцию в среде Modelsim. Для этого выбрать в меню Quartus пункт
 Tools -> Run Simulation Tool -> RTL Simulation.
 +
