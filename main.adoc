@@ -870,7 +870,8 @@ ID :: Такт, в котором происходит операция дисп
 ==== Задание №2
 В ходе выполнения данного задания необходимо выполнить следующие действия:
 
-. Открыть проект `riscv-lab/taiga/taiga.qpf` в среде Intel Quartus.
+. Открыть проект `riscv-lab/taiga/taiga.qpf` в среде Intel Quartus. При запуске
+Intel Quartus, если потребуется, выбрать опцию `Run the Quartus Prime software`.
 . Выполнить синтез проекта выбрав пункт меню Processing -> Start Compilation.
 . Запустить симуляцию в среде Modelsim. Для этого выбрать в меню Quartus пункт
 Tools -> Run Simulation Tool -> RTL Simulation.
@@ -878,7 +879,7 @@ Tools -> Run Simulation Tool -> RTL Simulation.
 NOTE: Если при запуске симуляции возникнет сообщение об ошибке, вызванной тем,
 что путь к симулятору не указан, необходимо открыть окно настроек Tools -> Options.
 В левой части окна найти пункт EDA Tool Options. В текстовом поле напротив пункта
-`ModelSim-Altera` ввести путь к каталогу с установленным симулятором: `C:\altera\13.0sp1\modelsim_ase`.
+`ModelSim-Altera` ввести путь к каталогу с установленным симулятором: `C:\intelFPGA_lite\20.1\modelsim_ase\win32aloem`.
 
 . Запустить симуляцию, набрав в командной строке Modelsim команду `run 460us`.
 . Изучить список сигналов, приведенных в окне Wave.
