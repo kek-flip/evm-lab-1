@@ -626,6 +626,8 @@ $ git clone https://gitlab.com/sibragimov/riscv-lab.git
 в каталог `src`. Текст программы сохранить в файле с расширением `.s`.
 . Изучить текст программы по индивидуальному варианту. Поместить в отчете псевдокод,
 соответствующий данной программе.
+. Анализируя исходный текст программы, ответьте на вопрос: какое значение должно
+содержаться в регистре `x31` в конце выполнения программы?
 . Изменить в `Makefile` строку `SRC=` так, чтобы ее содержимое соответствовало
 имени файла с текстом программы без расширения `.s`.
 . Выполнить компиляцию командой `gmake`. В процессе будет создан файл с расширением `.hex`,
@@ -1430,6 +1432,8 @@ image::img/pipeline.svg[]
 модуля выбрать пункт Recompile.
 . Ввести в командой строке Modelsim команду `restart; run 460us` для перезапуска симуляции.
 . Получить временную диаграмму сигналов выполнения программы индивидуального варианта.
+. Сравнить значение регистра `x31` (сигнал `/tb/register_file[31]`) на момент
+окончания выполнения программы с тем, который был получен в Задании №1.
 . Получить снимок экрана, содержащий временные диаграммы сигналов, соответствующих всем
 стадиям выполнения команды, обозначенной в тексте программы символом `#!`.
 . Анализируя диаграмму заполнить трассу выполнения программы. Рекомендуется использовать
@@ -1863,13 +1867,13 @@ _x:     .4byte 0x1
 
 _start:
         la x1, _x
-        addi x20, x1, elem_sz*len #Адрес элемента, следующего за последним
+        addi x20, x1, elem_sz*(len+1) #Адрес элемента, следующего за последним
         lw x31, 0(x1)
         add x1, x1, elem_sz*1
 lp:
         lw x2, 0(x1)
         bltu x2, x31, lt
-        addi x31, x0, x2 #!
+        add x31, x0, x2 #!
 lt:
         add x1, x1, elem_sz*enroll
         bne x1, x20, lp
@@ -1897,13 +1901,13 @@ _x:     .4byte 0x1
 
 _start:
         la x1, _x
-        addi x20, x1, elem_sz*len #Адрес элемента, следующего за последним
+        addi x20, x1, elem_sz*(len+1) #Адрес элемента, следующего за последним
         lw x31, 0(x1)
         add x1, x1, elem_sz*1
 lp:
         lw x2, 0(x1)
         bltu x2, x31, lt
-        addi x31, x0, x2 #!
+        add x31, x0, x2 #!
 lt:
         add x1, x1, elem_sz*enroll
         bne x1, x20, lp
@@ -1931,12 +1935,13 @@ _x:     .4byte 0x1
 
 _start:
         la x1, _x
-        addi x20, x0, len/enroll-1
+        addi x20, x0, (len-1)/enroll
         lw x31, 0(x1)
+        addi x1, x1, elem_sz*1
 lp:
         lw x2, 0(x1)
         bltu x2, x31, lt
-        addi x31, x0, x2 #!
+        add x31, x0, x2 #!
 lt:
         add x1, x1, elem_sz*enroll
         addi x20, x20, -1
@@ -1967,11 +1972,12 @@ _start:
         la x1, _x
         addi x20, x0, (len-1)/enroll
         lw x31, 0(x1)
+        addi x1, x1, elem_sz*1
 lp:
         lw x2, 0(x1)
         add x1, x1, elem_sz*enroll
         bltu x2, x31, lt
-        addi x31, x0, x2 #!
+        add x31, x0, x2 #!
 lt:
         addi x20, x20, -1
         bne x20, x0, lp
@@ -1988,7 +1994,7 @@ _x:     .4byte 0x1
         .4byte 0x5
         .4byte 0x4
 ....
-`!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!`
+
 .Вариант 17
 ....
         .section .text
@@ -1999,16 +2005,16 @@ _x:     .4byte 0x1
 
 _start:
         la x1, _x
-        addi x20, x1, elem_sz*len #Адрес элемента, следующего за последним
+        addi x20, x1, elem_sz*(len+1) #Адрес элемента, следующего за последним
         lw x31, 0(x1)
-        add x1, x1, elem_sz*1
+        addi x1, x1, elem_sz*1
 lp:
         lw x2, 0(x1)
-        lw x3, 0(x1) #!
+        lw x3, 4(x1) #!
         bltu x2, x31, lt1
-        addi x31, x0, x2
+        add x31, x0, x2
 lt1:    bltu x3, x31, lt2
-        addi x31, x0, x3
+        add x31, x0, x3
 lt2:
         add x1, x1, elem_sz*enroll
         bne x1, x20, lp
@@ -2036,16 +2042,16 @@ _x:     .4byte 0x1
 
 _start:
         la x1, _x
-        addi x20, x1, elem_sz*len #Адрес элемента, следующего за последним
+        addi x20, x1, elem_sz*(len+1) #Адрес элемента, следующего за последним
         lw x31, 0(x1)
-        add x1, x1, elem_sz*1
+        addi x1, x1, elem_sz*1
 lp:
         lw x2, 0(x1) #!
-        lw x3, 0(x1)
+        lw x3, 4(x1)
         bltu x2, x31, lt1
-        addi x31, x0, x2
+        add x31, x0, x2
 lt1:    bltu x3, x31, lt2
-        addi x31, x0, x3
+        add x31, x0, x3
 lt2:
         add x1, x1, elem_sz*enroll
         bne x1, x20, lp
@@ -2075,13 +2081,14 @@ _start:
         la x1, _x
         addi x20, x0, (len-1)/enroll
         lw x31, 0(x1)
+        addi x1, x1, elem_sz*1
 lp:
         lw x2, 0(x1)
         lw x3, 4(x1)
         bltu x2, x31, lt1
-        addi x31, x0, x2 #!
+        add x31, x0, x2 #!
 lt1:    bltu x3, x31, lt2
-        addi x31, x0, x3 #!
+        add x31, x0, x3
 lt2:
         add x1, x1, elem_sz*enroll
         addi x20, x20, -1
@@ -2112,14 +2119,15 @@ _start:
         la x1, _x
         addi x20, x0, (len-1)/enroll
         lw x31, 0(x1)
+        addi x1, x1, elem_sz*1
 lp:
         lw x2, 0(x1)
         lw x3, 4(x1)
         add x1, x1, elem_sz*enroll
         bltu x2, x31, lt1
-        addi x31, x0, x2 #!
+        add x31, x0, x2 #!
 lt1:    bltu x3, x31, lt2
-        addi x31, x0, x3 #!
+        add x31, x0, x3
 lt2:
         addi x20, x20, -1
         bne x20, x0, lp
@@ -2135,4 +2143,310 @@ _x:     .4byte 0x1
         .4byte 0x7
         .4byte 0x5
         .4byte 0x4
+....
+
+.Вариант 21
+....
+        .section .text
+        .globl _start;
+        len = 9 #Размер массива
+        enroll = 4 #Количество обрабатываемых элементов за одну итерацию
+        elem_sz = 4 #Размер одного элемента массива
+
+_start:
+        la x1, _x
+        addi x20, x0, (len-1)/enroll
+        lw x31, 0(x1)
+        addi x1, x1, elem_sz*1
+lp:
+        lw x2, 0(x1)
+        lw x3, 4(x1)
+        lw x4, 8(x1)
+        lw x5, 12(x1)
+        bltu x2, x31, lt1
+        add x31, x0, x2
+lt1:    bltu x3, x31, lt2
+        add x31, x0, x3
+lt2:    bltu x4, x31, lt3
+        add x31, x0, x4 #!
+lt3:    bltu x5, x31, lt4
+        add x31, x0, x5
+lt4:
+        add x1, x1, elem_sz*enroll
+        addi x20, x20, -1
+        bne x20, x0, lp
+lp2: j lp2
+
+        .section .data
+_x:     .4byte 0x1
+        .4byte 0x2
+        .4byte 0x3
+        .4byte 0x4
+        .4byte 0x5
+        .4byte 0x6
+        .4byte 0x7
+        .4byte 0x8
+        .4byte 0x9
+....
+
+.Вариант 22
+....
+        .section .text
+        .globl _start;
+        len = 9 #Размер массива
+        enroll = 4 #Количество обрабатываемых элементов за одну итерацию
+        elem_sz = 4 #Размер одного элемента массива
+
+_start:
+        la x1, _x
+        addi x20, x0, (len-1)/enroll
+        lw x31, 0(x1)
+        addi x1, x1, elem_sz*1
+lp:
+        lw x2, 0(x1)
+        lw x3, 4(x1)
+        add x1, x1, elem_sz*enroll
+        addi x20, x20, -1
+        lw x4, 8(x1)
+        lw x5, 12(x1)
+        bltu x2, x31, lt1
+        add x31, x0, x2
+lt1:    bltu x3, x31, lt2
+        add x31, x0, x3
+lt2:    bltu x4, x31, lt3
+        add x31, x0, x4
+lt3:    bltu x5, x31, lt4
+        add x31, x0, x5  #!
+lt4:
+        bne x20, x0, lp
+lp2: j lp2
+
+        .section .data
+_x:     .4byte 0x1
+        .4byte 0x2
+        .4byte 0x3
+        .4byte 0x9
+        .4byte 0x5
+        .4byte 0x6
+        .4byte 0x7
+        .4byte 0x8
+        .4byte 0x4
+....
+
+
+.Вариант 23
+....
+        .section .text
+        .globl _start;
+        len = 9 #Размер массива
+        enroll = 4 #Количество обрабатываемых элементов за одну итерацию
+        elem_sz = 4 #Размер одного элемента массива
+
+_start:
+        la x1, _x
+        addi x20, x1, elem_sz*len #Адрес элемента, следующего за последним
+        lw x31, 0(x1)
+        addi x1, x1, elem_sz*1
+lp:
+        lw x2, 0(x1)
+        lw x3, 4(x1)
+        lw x4, 8(x1)
+        lw x5, 12(x1)
+        bltu x2, x31, lt1
+        add x31, x0, x2
+lt1:    bltu x3, x31, lt2
+        add x31, x0, x3
+lt2:    bltu x4, x31, lt3
+        add x31, x0, x4 #!
+lt3:    bltu x5, x31, lt4
+        add x31, x0, x5
+lt4:
+        add x1, x1, elem_sz*enroll
+        bne x20, x1, lp
+lp2: j lp2
+
+        .section .data
+_x:     .4byte 0x1
+        .4byte 0x2
+        .4byte 0x3
+        .4byte 0x4
+        .4byte 0x5
+        .4byte 0x6
+        .4byte 0x7
+        .4byte 0x8
+        .4byte 0x9
+....
+
+.Вариант 24
+....
+        .section .text
+        .globl _start;
+        len = 9 #Размер массива
+        enroll = 4 #Количество обрабатываемых элементов за одну итерацию
+        elem_sz = 4 #Размер одного элемента массива
+
+_start:
+        la x1, _x
+        addi x20, x1, elem_sz*(len+1) #Адрес элемента, следующего за последним
+        lw x31, 0(x1)
+        add x1, x1, elem_sz*1
+lp:
+        lw x2, 0(x1)
+        lw x3, 4(x1)
+        add x1, x1, elem_sz*enroll
+        lw x4, 8(x1)
+        lw x5, 12(x1)
+        bltu x2, x31, lt1
+        add x31, x0, x2
+lt1:    bltu x3, x31, lt2
+        add x31, x0, x3
+lt2:    bltu x4, x31, lt3
+        add x31, x0, x4
+lt3:    bltu x5, x31, lt4
+        add x31, x0, x5  #!
+lt4:
+        bne x20, x0, lp
+lp2: j lp2
+
+        .section .data
+_x:     .4byte 0x1
+        .4byte 0x2
+        .4byte 0x3
+        .4byte 0x9
+        .4byte 0x5
+        .4byte 0x6
+        .4byte 0x7
+        .4byte 0x8
+        .4byte 0x4
+....
+
+.Вариант 25
+....
+        .section .text
+        .globl _start;
+        len = 9 #Размер массива
+        enroll = 4 #Количество обрабатываемых элементов за одну итерацию
+        elem_sz = 4 #Размер одного элемента массива
+
+_start:
+        la x1, _x
+        addi x20, x1, elem_sz*(len+1) #Адрес элемента, следующего за последним
+        lw x31, 0(x1)
+        add x1, x1, elem_sz*1
+lp:
+        lw x2, 0(x1)
+        lw x3, 4(x1)
+        add x1, x1, elem_sz*enroll
+        bltu x2, x31, lt1
+        add x31, x0, x2
+lt1:    bltu x3, x31, lt2
+        add x31, x0, x3
+lt2:    lw x4, 8(x1) #!
+        lw x5, 12(x1)
+        bltu x4, x31, lt3
+        add x31, x0, x4
+lt3:    bltu x5, x31, lt4
+        add x31, x0, x5
+lt4:
+        bne x20, x0, lp
+lp2: j lp2
+
+        .section .data
+_x:     .4byte 0x1
+        .4byte 0x2
+        .4byte 0x3
+        .4byte 0x4
+        .4byte 0x5
+        .4byte 0x9
+        .4byte 0x7
+        .4byte 0x9
+        .4byte 0x4
+....
+
+.Вариант 26
+....
+        .section .text
+        .globl _start;
+        len = 9 #Размер массива
+        enroll = 4 #Количество обрабатываемых элементов за одну итерацию
+        elem_sz = 4 #Размер одного элемента массива
+
+_start:
+        la x1, _x
+        addi x20, x0, (len-1)/enroll
+        lw x31, 0(x1)
+        addi x1, x1, elem_sz*1
+lp:
+        lw x2, 0(x1)
+        lw x3, 4(x1)
+        add x1, x1, elem_sz*enroll
+        bltu x2, x31, lt1
+        add x31, x0, x2
+lt1:    bltu x3, x31, lt2
+        add x31, x0, x3
+lt2:    lw x4, 8(x1)
+        lw x5, 12(x1)
+        addi x20, x20, -1 #!
+        bltu x4, x31, lt3
+        add x31, x0, x4
+lt3:    bltu x5, x31, lt4
+        add x31, x0, x5
+lt4:
+        bne x20, x0, lp
+lp2: j lp2
+
+        .section .data
+_x:     .4byte 0x1
+        .4byte 0x2
+        .4byte 0x3
+        .4byte 0x4
+        .4byte 0x5
+        .4byte 0x6
+        .4byte 0x9
+        .4byte 0x8
+        .4byte 0x4
+....
+
+.Вариант 27
+....
+        .section .text
+        .globl _start;
+        len = 9 #Размер массива
+        enroll = 4 #Количество обрабатываемых элементов за одну итерацию
+        elem_sz = 4 #Размер одного элемента массива
+
+_start:
+        la x1, _x
+        addi x20, x0, (len-1)/enroll
+        lw x31, 0(x1)
+        addi x1, x1, elem_sz*1
+lp:
+        lw x2, 0(x1)
+        lw x3, 4(x1)
+        add x1, x1, elem_sz*enroll
+        addi x20, x20, -1 #!
+        bltu x2, x31, lt1
+        add x31, x0, x2
+lt1:    bltu x3, x31, lt2
+        add x31, x0, x3
+lt2:    lw x4, 8(x1)
+        lw x5, 12(x1)
+        bltu x4, x31, lt3
+        add x31, x0, x4
+lt3:    bltu x5, x31, lt4
+        add x31, x0, x5
+lt4:
+        bne x20, x0, lp
+lp2: j lp2
+
+        .section .data
+_x:     .4byte 0x1
+        .4byte 0x2
+        .4byte 0x3
+        .4byte 0x4
+        .4byte 0x5
+        .4byte 0x6
+        .4byte 0x5
+        .4byte 0x8
+        .4byte 0x9
 ....
