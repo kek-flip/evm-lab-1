@@ -485,7 +485,7 @@ rd := ZeroExtend( MemRead8(addr) )
         len = 8 #Размер массива <3>
         enroll = 4 #Количество обрабатываемых элементов за одну итерацию
         elem_sz = 4 #Размер одного элемента массива
-_start:
+_start: <4>
         addi x20, x0, len/enroll <5>
         la x1, _x #<6>
 loop:
