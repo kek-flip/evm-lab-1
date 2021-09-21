@@ -1679,7 +1679,7 @@ _x:     .4byte 0x1
 
 _start:
         la x1, _x
-        addi x20, x1, elem_sz*(len-1) #Адрес последнего элемента
+        addi x20, x1, elem_sz*len #Адрес последнего элемента
 lp:
         lw x2, 0(x1)
         add x31, x31, x2 #!
@@ -1711,7 +1711,7 @@ _x:     .4byte 0x1
 
 _start:
         la x1, _x
-        addi x20, x1, elem_sz*(len-1) #Адрес последнего элемента
+        addi x20, x1, elem_sz*len #Адрес последнего элемента
 lp:
         lw x2, 0(x1)
         lw x3, 4(x1)
@@ -1817,7 +1817,7 @@ _x:     .4byte 0x1
 
 _start:
         la x1, _x
-        addi x20, x1, elem_sz*(len-1) #Адрес последнего элемента
+        addi x20, x1, elem_sz*len #Адрес последнего элемента
 lp:
         lw x2, 0(x1)
         add x31, x31, x2 #!
@@ -1853,7 +1853,7 @@ _x:     .4byte 0x1
 
 _start:
         la x1, _x
-        addi x20, x1, elem_sz*(len-1) #Адрес последнего элемента
+        addi x20, x1, elem_sz*len #Адрес последнего элемента
 lp:
         lw x2, 0(x1)
         lw x3, 4(x1)
