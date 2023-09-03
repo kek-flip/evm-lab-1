@@ -2,7 +2,7 @@ import taiga_config::*;
 import taiga_types::*;
 import l2_config_and_types::*;
 
-module tb();
+module tb #(parameter HEX_FILE="") ();
    logic sys_clk; 
    logic ext_reset;
    trace_outputs_t tr;
@@ -17,7 +17,7 @@ module tb();
    logic [31:0] cyc_cnt;
    
    
-   taiga_wrapper uut(
+   taiga_wrapper #(.HEX_FILE(HEX_FILE)) uut(
         .sys_clk,
         .ext_reset,
 	.tr

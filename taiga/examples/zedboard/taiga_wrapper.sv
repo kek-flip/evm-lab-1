@@ -31,6 +31,7 @@ import taiga_config::*, taiga_types::*, l2_config_and_types::*;
         
     parameter SCRATCH_MEM_KB = 16;
     parameter MEM_LINES = (SCRATCH_MEM_KB*1024)/4;
+    parameter HEX_FILE = "";
 
     logic clk;
 	 assign clk=sys_clk;
@@ -73,7 +74,7 @@ import taiga_config::*, taiga_types::*, l2_config_and_types::*;
     endgenerate */
 
     //arm proc(.*);
-    byte_en_BRAM #(MEM_LINES, "../../../src/test.hex", 1) inst_data_ram (
+    byte_en_BRAM #(MEM_LINES, HEX_FILE, 1) inst_data_ram (
             .clk(clk),
             .addr_a(instruction_bram.addr[$clog2(MEM_LINES)- 1:0]),
             .en_a(instruction_bram.en),

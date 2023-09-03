@@ -37,7 +37,7 @@ module regfile_bank_sel
     );
     //////////////////////////////////////////
     typedef logic [LOG2_COMMIT_PORTS-1:0] sel_bank_t [32] ; 
-    sel_bank_t sel_bank [COMMIT_PORTS]; 
+    sel_bank_t sel_bank [COMMIT_PORTS]='{default: 0}; 
 
     logic [LOG2_COMMIT_PORTS-1:0] new_bank_sel [COMMIT_PORTS];
     genvar i;
@@ -60,7 +60,6 @@ module regfile_bank_sel
     ////////////////////////////////////////////////////
     //Memory Blocks
     generate for (i = 0; i < COMMIT_PORTS; i++) begin : for1 
-        initial sel_bank[i] = '{default: 0};
         always_ff @ (posedge clk) begin
             if (rd_retired[i])
                 sel_bank[i][rd_addr[i]] <= new_bank_sel[i]; //sel_bank[i][rd_addr[i]] <= i ^ sel_bank[j!=i][rd_addr[i]]
