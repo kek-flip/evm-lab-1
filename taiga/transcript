@@ -803,3 +803,5 @@
 run 460us
 # ** Warning: (vsim-PLI-3408) Too few data words read on line 25 of file "../src/test.hex". Expected 4096, found 24.    : core/intel/intel_byte_enable_ram.sv(50)
 #    Time: 0 ps  Iteration: 0  Instance: /tb/uut/inst_data_ram/ram_block
+# WARNING: No extended dataflow license exists
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/user/evm_2_shenfeldtia/davydov/imgReport/wave.do
