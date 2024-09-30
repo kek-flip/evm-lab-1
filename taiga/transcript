@@ -6,7 +6,6 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Copying /opt/modelsim/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
 # set HEX_FILE $1
@@ -14,37 +13,37 @@
 # 
 # vlog -sv -svinputport=net -work work +incdir+lib {lib/taiga_config.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:14 on Sep 30,2024
+# Start time: 17:14:36 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+lib" lib/taiga_config.sv 
 # -- Compiling package taiga_config
 # 
 # Top level modules:
 # 	--none--
-# End time: 16:24:14 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:36 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+local_memory {local_memory/local_memory_interface.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:14 on Sep 30,2024
+# Start time: 17:14:36 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+local_memory" local_memory/local_memory_interface.sv 
 # -- Compiling interface local_memory_interface
 # 
 # Top level modules:
 # 	--none--
-# End time: 16:24:14 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:37 on Sep 30,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+l2_arbiter {l2_arbiter/l2_config_and_types.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:14 on Sep 30,2024
+# Start time: 17:14:37 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+l2_arbiter" l2_arbiter/l2_config_and_types.sv 
 # -- Compiling package l2_config_and_types
 # 
 # Top level modules:
 # 	--none--
-# End time: 16:24:14 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:37 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/one_hot_to_integer.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:14 on Sep 30,2024
+# Start time: 17:14:37 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/one_hot_to_integer.sv 
 # -- Compiling module one_hot_to_integer
 # ** Warning: core/one_hot_to_integer.sv(45): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
@@ -58,32 +57,32 @@
 # 
 # Top level modules:
 # 	one_hot_to_integer
-# End time: 16:24:14 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:37 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 8
 # vlog -sv -svinputport=net -work work +incdir+core {core/cycler.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:14 on Sep 30,2024
+# Start time: 17:14:37 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/cycler.sv 
 # -- Compiling module cycler
 # 
 # Top level modules:
 # 	cycler
-# End time: 16:24:14 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:37 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+lib {lib/riscv_types.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:14 on Sep 30,2024
+# Start time: 17:14:37 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+lib" lib/riscv_types.sv 
 # -- Compiling package riscv_types
 # -- Importing package taiga_config
 # 
 # Top level modules:
 # 	--none--
-# End time: 16:24:14 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:37 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+l2_arbiter {l2_arbiter/l2_interfaces.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:14 on Sep 30,2024
+# Start time: 17:14:37 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+l2_arbiter" l2_arbiter/l2_interfaces.sv 
 # -- Compiling package l2_interfaces_sv_unit
 # -- Importing package l2_config_and_types
@@ -91,11 +90,11 @@
 # 
 # Top level modules:
 # 	--none--
-# End time: 16:24:14 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:37 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+l2_arbiter {l2_arbiter/l2_external_interfaces.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:14 on Sep 30,2024
+# Start time: 17:14:37 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+l2_arbiter" l2_arbiter/l2_external_interfaces.sv 
 # -- Compiling package l2_external_interfaces_sv_unit
 # -- Importing package l2_config_and_types
@@ -104,22 +103,22 @@
 # 
 # Top level modules:
 # 	--none--
-# End time: 16:24:14 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:37 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/illegal_instruction_checker.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:15 on Sep 30,2024
+# Start time: 17:14:37 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/illegal_instruction_checker.sv 
 # -- Compiling module illegal_instruction_checker
 # -- Importing package taiga_config
 # 
 # Top level modules:
 # 	illegal_instruction_checker
-# End time: 16:24:15 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:37 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+lib {lib/taiga_types.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:15 on Sep 30,2024
+# Start time: 17:14:37 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+lib" lib/taiga_types.sv 
 # -- Compiling package taiga_types
 # -- Importing package taiga_config
@@ -127,11 +126,11 @@
 # 
 # Top level modules:
 # 	--none--
-# End time: 16:24:15 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:37 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core/intel {core/intel/intel_byte_enable_ram.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:15 on Sep 30,2024
+# Start time: 17:14:37 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core/intel" core/intel/intel_byte_enable_ram.sv 
 # -- Compiling module intel_byte_enable_ram
 # -- Importing package taiga_config
@@ -140,11 +139,11 @@
 # 
 # Top level modules:
 # 	intel_byte_enable_ram
-# End time: 16:24:15 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:37 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/toggle_memory.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:15 on Sep 30,2024
+# Start time: 17:14:37 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/toggle_memory.sv 
 # -- Compiling module toggle_memory
 # -- Importing package taiga_config
@@ -153,11 +152,11 @@
 # 
 # Top level modules:
 # 	toggle_memory
-# End time: 16:24:15 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:37 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/shift_counter.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:15 on Sep 30,2024
+# Start time: 17:14:37 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/shift_counter.sv 
 # -- Compiling module shift_counter
 # -- Importing package taiga_config
@@ -166,11 +165,11 @@
 # 
 # Top level modules:
 # 	shift_counter
-# End time: 16:24:15 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:37 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/set_clr_reg_with_rst.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:15 on Sep 30,2024
+# Start time: 17:14:37 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/set_clr_reg_with_rst.sv 
 # -- Compiling module set_clr_reg_with_rst
 # -- Importing package taiga_config
@@ -179,11 +178,11 @@
 # 
 # Top level modules:
 # 	set_clr_reg_with_rst
-# End time: 16:24:15 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:38 on Sep 30,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/register_file.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:15 on Sep 30,2024
+# Start time: 17:14:38 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/register_file.sv 
 # -- Compiling module register_file
 # -- Importing package taiga_config
@@ -192,11 +191,11 @@
 # 
 # Top level modules:
 # 	register_file
-# End time: 16:24:15 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:38 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/regfile_bank_sel.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:15 on Sep 30,2024
+# Start time: 17:14:38 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/regfile_bank_sel.sv 
 # -- Compiling module regfile_bank_sel
 # -- Importing package taiga_config
@@ -205,11 +204,11 @@
 # 
 # Top level modules:
 # 	regfile_bank_sel
-# End time: 16:24:15 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:38 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/interfaces.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:15 on Sep 30,2024
+# Start time: 17:14:38 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/interfaces.sv 
 # -- Compiling interface branch_predictor_interface
 # -- Importing package taiga_config
@@ -232,11 +231,11 @@
 # 
 # Top level modules:
 # 	--none--
-# End time: 16:24:15 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:38 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/external_interfaces.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:15 on Sep 30,2024
+# Start time: 17:14:38 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/external_interfaces.sv 
 # -- Compiling interface axi_interface
 # -- Importing package taiga_config
@@ -250,11 +249,11 @@
 # 
 # Top level modules:
 # 	--none--
-# End time: 16:24:15 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:38 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/csr_types.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:15 on Sep 30,2024
+# Start time: 17:14:38 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/csr_types.sv 
 # -- Compiling package csr_types
 # -- Importing package taiga_config
@@ -263,11 +262,11 @@
 # 
 # Top level modules:
 # 	--none--
-# End time: 16:24:15 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:38 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/byte_en_BRAM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:15 on Sep 30,2024
+# Start time: 17:14:38 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/byte_en_BRAM.sv 
 # -- Compiling module byte_en_BRAM
 # -- Importing package taiga_config
@@ -276,11 +275,11 @@
 # 
 # Top level modules:
 # 	byte_en_BRAM
-# End time: 16:24:15 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:38 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/branch_predictor_ram.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:15 on Sep 30,2024
+# Start time: 17:14:38 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/branch_predictor_ram.sv 
 # -- Compiling module branch_predictor_ram
 # -- Importing package taiga_config
@@ -289,11 +288,11 @@
 # 
 # Top level modules:
 # 	branch_predictor_ram
-# End time: 16:24:15 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:38 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/branch_comparator.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:16 on Sep 30,2024
+# Start time: 17:14:38 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/branch_comparator.sv 
 # -- Compiling module branch_comparator
 # -- Importing package taiga_config
@@ -302,11 +301,11 @@
 # 
 # Top level modules:
 # 	branch_comparator
-# End time: 16:24:16 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:38 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/barrel_shifter.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:16 on Sep 30,2024
+# Start time: 17:14:38 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/barrel_shifter.sv 
 # -- Compiling module barrel_shifter
 # -- Importing package taiga_config
@@ -315,11 +314,11 @@
 # 
 # Top level modules:
 # 	barrel_shifter
-# End time: 16:24:16 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:38 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/taiga_fifo.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:16 on Sep 30,2024
+# Start time: 17:14:38 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/taiga_fifo.sv 
 # -- Compiling module taiga_fifo
 # -- Importing package taiga_config
@@ -337,11 +336,11 @@
 # 
 # Top level modules:
 # 	taiga_fifo
-# End time: 16:24:16 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:38 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 3
 # vlog -sv -svinputport=net -work work +incdir+core {core/register_file_and_writeback.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:16 on Sep 30,2024
+# Start time: 17:14:38 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/register_file_and_writeback.sv 
 # -- Compiling module register_file_and_writeback
 # -- Importing package taiga_config
@@ -350,11 +349,11 @@
 # 
 # Top level modules:
 # 	register_file_and_writeback
-# End time: 16:24:16 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:39 on Sep 30,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/load_store_unit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:16 on Sep 30,2024
+# Start time: 17:14:39 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/load_store_unit.sv 
 # -- Compiling module load_store_unit
 # -- Importing package taiga_config
@@ -376,11 +375,11 @@
 # 
 # Top level modules:
 # 	load_store_unit
-# End time: 16:24:16 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:39 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 7
 # vlog -sv -svinputport=net -work work +incdir+core {core/instruction_metadata_and_id_management.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:16 on Sep 30,2024
+# Start time: 17:14:39 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/instruction_metadata_and_id_management.sv 
 # -- Compiling module instruction_metadata_and_id_management
 # -- Importing package taiga_config
@@ -398,11 +397,11 @@
 # 
 # Top level modules:
 # 	instruction_metadata_and_id_management
-# End time: 16:24:16 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:39 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 3
 # vlog -sv -svinputport=net -work work +incdir+core {core/ibram.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:16 on Sep 30,2024
+# Start time: 17:14:39 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/ibram.sv 
 # -- Compiling module ibram
 # -- Importing package taiga_config
@@ -411,11 +410,11 @@
 # 
 # Top level modules:
 # 	ibram
-# End time: 16:24:16 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:39 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/gc_unit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:16 on Sep 30,2024
+# Start time: 17:14:39 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/gc_unit.sv 
 # -- Compiling module gc_unit
 # -- Importing package taiga_config
@@ -425,11 +424,11 @@
 # 
 # Top level modules:
 # 	gc_unit
-# End time: 16:24:16 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:39 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/fetch.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:16 on Sep 30,2024
+# Start time: 17:14:39 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/fetch.sv 
 # -- Compiling module fetch
 # -- Importing package taiga_config
@@ -444,11 +443,11 @@
 # 
 # Top level modules:
 # 	fetch
-# End time: 16:24:16 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:39 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 2
 # vlog -sv -svinputport=net -work work +incdir+core {core/decode_and_issue.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:16 on Sep 30,2024
+# Start time: 17:14:39 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/decode_and_issue.sv 
 # -- Compiling module decode_and_issue
 # -- Importing package taiga_config
@@ -463,11 +462,11 @@
 # 
 # Top level modules:
 # 	decode_and_issue
-# End time: 16:24:16 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:39 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 2
 # vlog -sv -svinputport=net -work work +incdir+core {core/dbram.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:16 on Sep 30,2024
+# Start time: 17:14:39 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/dbram.sv 
 # -- Compiling module dbram
 # -- Importing package taiga_config
@@ -476,11 +475,11 @@
 # 
 # Top level modules:
 # 	dbram
-# End time: 16:24:16 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:39 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/csr_regs.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:16 on Sep 30,2024
+# Start time: 17:14:39 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/csr_regs.sv 
 # -- Compiling module csr_regs
 # -- Importing package taiga_config
@@ -539,11 +538,11 @@
 # 
 # Top level modules:
 # 	csr_regs
-# End time: 16:24:16 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:39 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 49
 # vlog -sv -svinputport=net -work work +incdir+core {core/branch_unit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:17 on Sep 30,2024
+# Start time: 17:14:39 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/branch_unit.sv 
 # -- Compiling module branch_unit
 # -- Importing package taiga_config
@@ -552,11 +551,11 @@
 # 
 # Top level modules:
 # 	branch_unit
-# End time: 16:24:17 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:39 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/branch_predictor.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:17 on Sep 30,2024
+# Start time: 17:14:39 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/branch_predictor.sv 
 # -- Compiling module branch_predictor
 # -- Importing package taiga_config
@@ -565,11 +564,11 @@
 # 
 # Top level modules:
 # 	branch_predictor
-# End time: 16:24:17 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:39 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/alu_unit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:17 on Sep 30,2024
+# Start time: 17:14:40 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/alu_unit.sv 
 # -- Compiling package alu_unit_sv_unit
 # -- Importing package taiga_config
@@ -579,11 +578,11 @@
 # 
 # Top level modules:
 # 	alu_unit
-# End time: 16:24:17 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:40 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/taiga.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:17 on Sep 30,2024
+# Start time: 17:14:40 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/taiga.sv 
 # -- Compiling module taiga
 # -- Importing package taiga_config
@@ -592,11 +591,11 @@
 # 
 # Top level modules:
 # 	taiga
-# End time: 16:24:17 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:40 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/ras.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:17 on Sep 30,2024
+# Start time: 17:14:40 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/ras.sv 
 # -- Compiling module ras
 # -- Importing package taiga_config
@@ -605,11 +604,11 @@
 # 
 # Top level modules:
 # 	ras
-# End time: 16:24:17 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:40 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+core {core/load_store_queue.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:17 on Sep 30,2024
+# Start time: 17:14:40 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+core" core/load_store_queue.sv 
 # -- Compiling module load_store_queue
 # -- Importing package taiga_config
@@ -618,11 +617,11 @@
 # 
 # Top level modules:
 # 	load_store_queue
-# End time: 16:24:17 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:40 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -svinputport=net -work work +incdir+examples/zedboard {examples/zedboard/taiga_wrapper.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:17 on Sep 30,2024
+# Start time: 17:14:40 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+examples/zedboard" examples/zedboard/taiga_wrapper.sv 
 # -- Compiling module taiga_wrapper
 # -- Importing package taiga_config
@@ -632,12 +631,12 @@
 # 
 # Top level modules:
 # 	taiga_wrapper
-# End time: 16:24:17 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:40 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -svinputport=net -work work +incdir+my_tb {my_tb/tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:24:17 on Sep 30,2024
+# Start time: 17:14:40 on Sep 30,2024
 # vlog -reportprogress 300 -sv -svinputport=net -work work "+incdir+my_tb" my_tb/tb.sv 
 # -- Compiling package tb_sv_unit
 # -- Importing package taiga_config
@@ -648,12 +647,12 @@
 # 
 # Top level modules:
 # 	tb
-# End time: 16:24:17 on Sep 30,2024, Elapsed time: 0:00:00
+# End time: 17:14:40 on Sep 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb -G HEX_FILE=$HEX_FILE
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb -GHEX_FILE=../src/test.hex 
-# Start time: 16:24:17 on Sep 30,2024
+# Start time: 17:14:40 on Sep 30,2024
 # Loading sv_std.std
 # Loading work.l2_config_and_types
 # Loading work.taiga_config
